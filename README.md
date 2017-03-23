@@ -1,0 +1,1 @@
+# weekly-and-monthly-rate
