@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>weekly rate and monthly rate converter</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="./css/styles.css" /> -->
+</head>
+
+<body>
+  <div class="container">
+    <div class="page-header">
+      <h2>weekly and monthly rate converter</h2>
+      <h2><small>Easily convert between rent per week to rent per month.</small></h2>
+      <h3><small>Enter your current rate in the appropriate text input and click the compute button to display the corresponding value for the rent.</small></h3>
+    </div>
+
+    <div class="clearfix">&nbsp;</div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">convert</h3>
+      </div>
+      <div class="panel-body">
+
+        <form class="form-inline">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Price per week</label>
+            <div class="input-group">
+              <div class="input-group-addon">£</div>
+              <input type="text" class="form-control" id="ratePW" placeholder="Amount">
+              <div class="input-group-addon">pw</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" id="compute">compute</button>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">Price per month</label>
+            <div class="input-group">
+              <div class="input-group-addon">£</div>
+              <input type="text" class="form-control" id="ratePCM" placeholder="Amount">
+              <div class="input-group-addon">pcm</div>
+            </div>
+          </div>
+        </form>
+      </div> <!-- ./panel-bod -->
+    </div>
+
+
+
+    <div class="clearfix">&nbsp;</div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">How the calculation is made</h3>
+      </div>
+      <div class="panel-body">
+        This calculator uses the following formula:<br>
+        <code>PCM = PW × 52 / 12</code>
+        <br>
+        To get the rental rate per month, the weekly value is multiplied by 52 to get the rent per year, then divided by 12.<br>
+        To convert from monthly to weekly rates, the reverse operation is applied.
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+  <!-- ./container -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- build:js ./js/app.min.js -->
+  <script src="../lib/pw-pcm-converter.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- /build -->
+  <script src="./js/ga.js"></script>
+</body>
+
+</html>
