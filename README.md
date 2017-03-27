@@ -3,14 +3,27 @@ Convert between weekly rate and monthly rate
 
 ## Usage
 
-```javascript
-var rateConverter = require('weekly-and-monthly-rate');
+install via npm
+
+```shell
+$ npm install weekly-and-monthly-rate
 ```
 
-1. Convert weekly to monthly rate
-  ```javascript
-  var monthlyRate = rateConverter.
-  ```
+1.Convert weekly to monthly rate
+
+```javascript
+var rateConverter = require('weekly-and-monthly-rate');
+var monthlyRate = rateConverter.ratePerMonth(300);
+// 1300
+```
+
+2.Convert monthly to weekly rate
+
+```javascript
+var rateConverter = require('weekly-and-monthly-rate');
+var monthlyRate = rateConverter.ratePerWeek(300);
+// 300
+```
 
 ### Requirements
 * [node](https://nodejs.org/), install node

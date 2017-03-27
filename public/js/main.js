@@ -1,22 +1,19 @@
 (function () {
-  var isPW = false;
+  /* global WeeklyMonthlyRate */
 
   $('#ratePW').change(function () {
-    isPW = true;
+    var pw = $('#ratePW').val();
+    var valPCM = Math.round(WeeklyMonthlyRate.ratePerMonth(pw) * 100) / 100;
+    $('#ratePCM').val(valPCM);
   });
   $('#ratePCM').change(function () {
-    isPW = false;
+    var pcm = $('#ratePCM').val();
+    var valPW = Math.round(WeeklyMonthlyRate.ratePerWeek(pcm) * 100) / 100;
+    $('#ratePW').val(valPW);
   });
-  $('#compute').click(function () {
-    /* global WeeklyMonthlyRate */
-    if (isPW) {
-      var pw = $('#ratePW').val();
-      var valPCM = Math.round(WeeklyMonthlyRate.ratePerMonth(pw) * 100) / 100;
-      $('#ratePCM').val(valPCM);
-    } else {
-      var pcm = $('#ratePCM').val();
-      var valPW = Math.round(WeeklyMonthlyRate.ratePerWeek(pcm) * 100) / 100;
-      $('#ratePW').val(valPW);
-    }
+  $('#clear').click(function () {
+    $('#ratePW').val('');
+    $('#ratePCM').val('');
+    return false;
   });
 })();
