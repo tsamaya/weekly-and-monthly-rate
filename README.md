@@ -21,7 +21,7 @@ var monthlyRate = rateConverter.ratePerMonth(300);
 
 ```javascript
 var rateConverter = require('weekly-and-monthly-rate');
-var monthlyRate = rateConverter.ratePerWeek(1300);
+var weeklyRate = rateConverter.ratePerWeek(1300);
 // 300
 ```
 
