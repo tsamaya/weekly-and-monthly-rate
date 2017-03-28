@@ -53,6 +53,12 @@ This means that to get the rental rate per week, the monthly value is multiplied
 1. run `npm install`
 1. run `gulp`
 
+### test coverage
+
+```shell
+$ npm run-script test_coverage
+```
+
 ## Issues
 Find a bug or want to request a new feature? Please let me know by submitting an [issue](https://github.com/tsamaya/weekly-and-monthly-rate/issues).
 

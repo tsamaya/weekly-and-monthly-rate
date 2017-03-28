@@ -1,10 +1,11 @@
 {
   "name": "weekly-and-monthly-rate",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert between weekly rate and monthly rate",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "test_coverage": "node ./node_modules/istanbul/lib/cli.js --hook-run-in-context cover ./node_modules/mocha/bin/_mocha test/lib/*  ./lib/*"
   },
   "repository": {
     "type": "git",
@@ -28,11 +29,9 @@
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^3.0.1",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-istanbul": "^1.1.1",
     "gulp-mocha": "^4.1.0",
     "gulp-processhtml": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.1.2",
     "pump": "^1.0.2",
     "require-dir": "^0.3.1",
