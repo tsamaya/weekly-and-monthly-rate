@@ -3,17 +3,23 @@ Convert between weekly rate and monthly rate
 
 ## Usage
 
-install via npm
+install via `npm`
 
 ```shell
 $ npm install weekly-and-monthly-rate
 ```
 
+## API
+
+TBD
+
+## Samples
+
 1.Convert weekly to monthly rate
 
 ```javascript
 var rateConverter = require('weekly-and-monthly-rate');
-var monthlyRate = rateConverter.ratePerMonth(300);
+rateConverter.ratePerMonth(300);
 // 1300
 ```
 
@@ -21,9 +27,21 @@ var monthlyRate = rateConverter.ratePerMonth(300);
 
 ```javascript
 var rateConverter = require('weekly-and-monthly-rate');
-var weeklyRate = rateConverter.ratePerWeek(1300);
+rateConverter.ratePerWeek(1300);
 // 300
 ```
+
+## How the calculation is made
+
+>PCM = PW × 52 / 12
+
+TODO:
+
+>PW = PCM × 12 / 365.25 × 7
+
+This means that to get the rental rate per week, the monthly value is multiplied by 12 to get the rent per year, then divided by 365.25 (the average number of days in a year, including leap years) to get the daily value, then multiplied by 7. To convert back into months, the reverse operation is applied.
+
+## Building / testing
 
 ### Requirements
 * [node](https://nodejs.org/), install node
@@ -48,6 +66,7 @@ Anyone and everyone is welcome to contribute.
 5. Create new Pull Request
 
 ## Resources
+* [nodeJS](https://nodejs.org)
 * [JQuery](https://jquery.com)
 * [Bootstrap](http://getbootstrap.com/)
 * [bootswatch paper](https://bootswatch.com/paper/)

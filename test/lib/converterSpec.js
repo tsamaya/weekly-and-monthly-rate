@@ -2,7 +2,8 @@
 
 var expect = require('chai').expect;
 // var converter = require('./../../lib/pw-pcm-converter');
-var rateConverter = require('./../../'); // root index
+// var rateConverter = require('./../../'); // root index
+var rateConverter = require('../../tmp/test/pw-pcm-converter');
 
 describe('converter', function () {
   describe('weekly', function () {
